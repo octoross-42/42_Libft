@@ -6,7 +6,7 @@
 /*   By: octoross <octoross@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 21:49:21 by octoross          #+#    #+#             */
-/*   Updated: 2023/05/04 21:49:21 by octoross         ###   ########.fr       */
+/*   Updated: 2023/05/05 18:40:24 by octoross         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,23 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	extracted[true_len] = '\0';
 	i = 0;
 	while (i < true_len)
-		extracted[i] = s[start + i++];
+	{
+		extracted[i] = s[start + i];
+		i ++;
+	}
 	return (extracted);
 }
+
+// int	main(int argc, char **argv)
+// {
+// 	if (argc > 3)
+// 	{
+// 		char const *s1 = argv[1];
+// 		unsigned int start = atoi(argv[2]);
+// 		size_t len = atoi(argv[3]);
+// 		char *return_type = ft_substr(s1, start, len);
+// 		printf("'%s'\n", return_type);
+// 		free(return_type);
+// 	}
+// 	return (0);
+// }
