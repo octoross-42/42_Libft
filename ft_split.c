@@ -6,7 +6,7 @@
 /*   By: octoross <octoross@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 22:34:46 by octoross          #+#    #+#             */
-/*   Updated: 2023/05/05 16:53:48 by octoross         ###   ########.fr       */
+/*   Updated: 2023/05/05 17:45:50 by octoross         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,20 +43,21 @@ size_t	ft_nbr_words(char const *s, char c)
 	return (nbr_words);
 }
 
-char	*ft_next_word(char *s, int *i, char c)
+char	*ft_next_word(const char *s, size_t *i, char c)
 {
 	char	*word;
 	int		len;
 
 	len = 0;
-	while (s[*i + len] != c)
+	while (s[*i + len] && s[*i + len] != c)
 		len ++;
 	word = (char *)malloc(sizeof(char) * (len + 1));
 	if (!word)
 		return (0);
 	word[len] = '\0';
-	while (s[*i] != c)
-		word[*i] = s[(*i)++];
+	len = 0;
+	while (s[*i] && s[*i] != c)
+		word[len++] = s[(*i)++];
 	while (s[*i] == c)
 		(*i)++;
 	return (word);
@@ -88,3 +89,24 @@ char	**ft_split(char const *s, char c)
 	}
 	return (splited);
 }
+
+// int	main(int argc, char **argv)
+// {
+// 	if (argc > 2)
+// 	{
+// 		char const *s = argv[1];		
+// 		char c = argv[2][0];
+// 		char **return_type = ft_split(s, c);
+// 		int i = 0;
+// 		printf("[ ");
+// 		while (return_type[i])
+// 		{
+// 			printf("'%s' ", return_type[i]);
+// 			free(return_type[i]);
+// 			i ++;
+// 		}
+// 		printf("]\n");
+// 		free(return_type);
+// 	}
+// 	return (0);
+// }
