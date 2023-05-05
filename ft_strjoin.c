@@ -6,7 +6,7 @@
 /*   By: octoross <octoross@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 22:10:12 by octoross          #+#    #+#             */
-/*   Updated: 2023/05/04 22:10:12 by octoross         ###   ########.fr       */
+/*   Updated: 2023/05/05 18:03:15 by octoross         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,15 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	concatenated[len] = '\0';
 	i = 0;
 	while (s1[i])
-		concatenated[i] = s1[i++];
+	{
+		concatenated[i] = s1[i];
+		i ++;
+	}
 	len = ft_strlen(s1);
 	while (s2[i])
-		concatenated[i] = s2[i++ - len];
+	{
+		concatenated[i] = s2[i - len];
+		i ++;
+	}
 	return (concatenated);
 }

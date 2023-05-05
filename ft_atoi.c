@@ -6,9 +6,11 @@
 /*   By: octoross <octoross@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 22:44:37 by octoross          #+#    #+#             */
-/*   Updated: 2023/05/03 22:44:37 by octoross         ###   ########.fr       */
+/*   Updated: 2023/05/05 17:52:04 by octoross         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {
@@ -34,5 +36,16 @@ int	ft_atoi(const char *nptr)
 		atoied = atoied * 10 + (nptr[i] - '0');
 		i ++;
 	}
-	return (atoied);
+	return (atoied * sign);
 }
+
+// int	main(int argc, char **argv)
+// {
+// 	if (argc > 1)
+// 	{
+// 		const char *nptr = argv[1];
+// 		int return_type = ft_atoi(nptr);
+// 		printf("%d ", return_type);
+// 	}
+// 	return (0);
+// }
