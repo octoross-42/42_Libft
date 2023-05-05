@@ -6,7 +6,7 @@
 /*   By: octoross <octoross@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 21:29:37 by octoross          #+#    #+#             */
-/*   Updated: 2023/05/03 21:29:37 by octoross         ###   ########.fr       */
+/*   Updated: 2023/05/05 20:24:29 by octoross         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,9 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	to = dest;
 	i = 0;
 	while (i < n)
-		to[i] = from[i++];
+	{
+		to[i] = from[i];
+		i ++;
+	}
 	return (dest);
 }
