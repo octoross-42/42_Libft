@@ -6,7 +6,7 @@
 /*   By: octoross <octoross@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 22:19:48 by octoross          #+#    #+#             */
-/*   Updated: 2023/05/03 22:19:48 by octoross         ###   ########.fr       */
+/*   Updated: 2023/05/05 18:32:29 by octoross         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,18 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (last);
 }
+
+// #include <string.h>
+// #include <stdio.h>
+
+// int	main(int argc, char **argv)
+// {
+// 	if (argc > 2)
+// 	{
+// 		const char *s = argv[1];
+// 		int c = argv[2][0];
+// 		char *return_type = ft_strrchr(s, c);
+// 		printf("'%s' '%s'\n", return_type, strrchr(s, c));
+// 	}
+// 	return (0);
+// }
