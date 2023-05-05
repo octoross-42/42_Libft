@@ -6,7 +6,7 @@
 /*   By: octoross <octoross@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 22:31:55 by octoross          #+#    #+#             */
-/*   Updated: 2023/05/03 22:31:55 by octoross         ###   ########.fr       */
+/*   Updated: 2023/05/05 20:26:32 by octoross         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ void	*ft_memrchr(const void *s, int c, size_t n)
 	while (i >= 0 && memory[i] != c)
 		i --;
 	if (i >= 0)
-		return (&(s[i]));
+		return ((void *)&(s[i]));
 	return (0);
 }
