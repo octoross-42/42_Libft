@@ -6,7 +6,7 @@
 /*   By: octoross <octoross@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 22:44:37 by octoross          #+#    #+#             */
-/*   Updated: 2023/05/05 17:52:04 by octoross         ###   ########.fr       */
+/*   Updated: 2023/05/05 20:36:08 by octoross         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_atoi(const char *nptr)
 	i = 0;
 	sign = 1;
 	atoied = 0;
-	if (nptr[0] == ' ')
+	while ((9 <= nptr[i] && nptr[i] <= 13) || nptr[i] == ' ')
 		i ++;
 	if (nptr[i] == '+' || nptr[i] == '-')
 	{
