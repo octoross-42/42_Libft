@@ -6,7 +6,7 @@
 /*   By: octoross <octoross@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 23:00:32 by octoross          #+#    #+#             */
-/*   Updated: 2023/05/05 18:02:34 by octoross         ###   ########.fr       */
+/*   Updated: 2023/05/05 21:38:34 by octoross         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,15 @@ char	*ft_strdup(const char *s)
 {
 	char	*duplicate;
 	int		i;
+	size_t	len;
 
 	if (!s)
 		return (0);
-	duplicate = (char *)malloc(sizeof(char) * ft_strlen(s));
+	len = ft_strlen(s);
+	duplicate = (char *)malloc(sizeof(char) * (len + 1));
 	if (!duplicate)
 		return (0);
+	duplicate[len] = '\0';
 	i = 0;
 	while (s[i])
 	{
