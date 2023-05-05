@@ -6,7 +6,7 @@
 /*   By: octoross <octoross@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 22:06:01 by octoross          #+#    #+#             */
-/*   Updated: 2023/05/05 18:18:40 by octoross         ###   ########.fr       */
+/*   Updated: 2023/05/05 18:25:15 by octoross         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 // 		printf("%zu '%s' '%s'\n", return_type, dst, src);
 // 		char *dst_ref = argv[4];
 // 		char *src_ref = argv[5];
-// 		printf("%zu '%s' '%s'\n", ft_strlcpy(dst_ref, src_ref, atoi(argv[3])), dst_ref, src_ref);
+// 		printf("%zu '%s' '%s'\n", 
+//			ft_strlcpy(dst_ref, src_ref, atoi(argv[3])), dst_ref, src_ref);
 // 	}
 // 	return (0);
 // }
