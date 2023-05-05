@@ -6,7 +6,7 @@
 /*   By: octoross <octoross@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 22:34:46 by octoross          #+#    #+#             */
-/*   Updated: 2023/05/04 22:34:46 by octoross         ###   ########.fr       */
+/*   Updated: 2023/05/05 16:53:48 by octoross         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,11 +43,29 @@ size_t	ft_nbr_words(char const *s, char c)
 	return (nbr_words);
 }
 
+char	*ft_next_word(char *s, int *i, char c)
+{
+	char	*word;
+	int		len;
+
+	len = 0;
+	while (s[*i + len] != c)
+		len ++;
+	word = (char *)malloc(sizeof(char) * (len + 1));
+	if (!word)
+		return (0);
+	word[len] = '\0';
+	while (s[*i] != c)
+		word[*i] = s[(*i)++];
+	while (s[*i] == c)
+		(*i)++;
+	return (word);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	size_t	nbr_words;
 	size_t	i;
-	size_t	len;
 	char	**splited;
 
 	if (!s)
@@ -57,15 +75,15 @@ char	**ft_split(char const *s, char c)
 	if (!splited)
 		return (0);
 	splited[nbr_words] = 0;
-	i = 
 	nbr_words = 0;
+	i = 0;
+	while (s[i] == c)
+			i ++;
 	while (s[i])
 	{
-		splited[nbr_words] = 0;
+		splited[nbr_words] = ft_next_word(s, &i, c);
 		if (!splited[nbr_words])
 			return (free_until(splited, nbr_words));
-		while (s[i] == c)
-			i ++;
 		nbr_words ++;
 	}
 	return (splited);
