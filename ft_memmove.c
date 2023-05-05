@@ -6,7 +6,7 @@
 /*   By: octoross <octoross@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 21:30:55 by octoross          #+#    #+#             */
-/*   Updated: 2023/05/03 21:30:55 by octoross         ###   ########.fr       */
+/*   Updated: 2023/05/05 19:47:41 by octoross         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,20 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	if (0 < to - from && to - from < (int) n)
 	{
 		i = n - 1;
-		while (i-- >= 0)
+		while (i >= 0)
+		{
 			to[i] = from[i];
+			i --;
+		}
 	}
 	else
 	{
 		i = 0;
-		while (i++ < n)
+		while (i < n)
+		{
 			to[i] = from[i];
+			i ++;
+		}
 	}
 	return (dest);
 }
