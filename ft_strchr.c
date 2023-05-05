@@ -6,7 +6,7 @@
 /*   By: octoross <octoross@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 22:16:48 by octoross          #+#    #+#             */
-/*   Updated: 2023/05/05 18:00:05 by octoross         ###   ########.fr       */
+/*   Updated: 2023/05/05 20:45:12 by octoross         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ char	*ft_strchr(const char *s, int c)
 	if (!s)
 		return (0);
 	i = 0;
-	while (s[i] && s[i] != c)
+	while (s[i] && s[i] != (char)c)
 		i ++;
-	if (s[i] == c)
+	if (s[i] == (char)c)
 		return ((char *) &(s[i]));
 	return (0);
 }
