@@ -6,7 +6,7 @@
 /*   By: octoross <octoross@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 22:37:56 by octoross          #+#    #+#             */
-/*   Updated: 2023/05/05 18:30:32 by octoross         ###   ########.fr       */
+/*   Updated: 2023/05/05 21:23:53 by octoross         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 	size_t	i;
 	size_t	j;
 
+	if (!s1[0] && !s2[0])
+		return ((char *)s1);
 	if (!s1 || !s2)
 		return (0);
 	if (ft_strlen(s2) > n)
