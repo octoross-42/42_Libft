@@ -6,7 +6,7 @@
 /*   By: octoross <octoross@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 17:58:26 by octoross          #+#    #+#             */
-/*   Updated: 2023/05/08 18:00:44 by octoross         ###   ########.fr       */
+/*   Updated: 2023/05/08 18:12:24 by octoross         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 
 	if (*lst)
 	{
-		next = *lst;	
+		next = *lst;
 		while (next->next)
 			next = next->next;
 		next->next = new;
