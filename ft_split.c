@@ -6,7 +6,7 @@
 /*   By: octoross <octoross@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 22:34:46 by octoross          #+#    #+#             */
-/*   Updated: 2023/05/08 16:16:12 by octoross         ###   ########.fr       */
+/*   Updated: 2023/05/08 16:50:25 by octoross         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,6 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (0);
 	nbr_words = ft_nbr_words(s, c);
-	printf("%zu\n", nbr_words);
 	splited = (char **)malloc(sizeof(char *) * (nbr_words + 1));
 	if (!splited)
 		return (0);
