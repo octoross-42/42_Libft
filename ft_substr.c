@@ -6,7 +6,7 @@
 /*   By: octoross <octoross@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 21:49:21 by octoross          #+#    #+#             */
-/*   Updated: 2023/05/05 21:46:38 by octoross         ###   ########.fr       */
+/*   Updated: 2023/05/08 16:06:20 by octoross         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 	size_t	true_len;
 
-	if (!s || start >= ft_strlen(s))
+	if (!s)
 		return (0);
+	if (start >= ft_strlen(s))
+		return (ft_strdup(""));
 	true_len = 0;
 	while (s[start + true_len] && true_len < len)
 		true_len ++;
