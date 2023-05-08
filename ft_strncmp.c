@@ -6,7 +6,7 @@
 /*   By: octoross <octoross@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 22:23:10 by octoross          #+#    #+#             */
-/*   Updated: 2023/05/05 18:25:22 by octoross         ###   ########.fr       */
+/*   Updated: 2023/05/08 20:17:06 by octoross         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		i ++;
 	if (i == n)
 		return (0);
-	return (s1[i] - s2[i]);
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
 
 // #include <string.h>
@@ -33,7 +33,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 // 	if (argc > 3)
 // 	{
 // 		printf("mine : %d\n ref : %d\n", 
-//			ft_strncmp(argv[1], argv[2], atoi(argv[3])), 
-//			strncmp(argv[1], argv[2], atoi(argv[3])));
+// 			ft_strncmp(argv[1], argv[2], atoi(argv[3])), 
+// 			strncmp(argv[1], argv[2], atoi(argv[3])));
 // 	}
 // }
