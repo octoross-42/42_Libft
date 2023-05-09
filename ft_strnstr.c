@@ -6,7 +6,7 @@
 /*   By: octoross <octoross@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 22:37:56 by octoross          #+#    #+#             */
-/*   Updated: 2023/05/09 15:05:20 by octoross         ###   ########.fr       */
+/*   Updated: 2023/05/09 16:00:45 by octoross         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 		return (0);
 	i = 0;
 	len_s2 = ft_strlen(s2);
-	while (i + len_s2 <= n)
+	while (s1[i] && i + len_s2 <= n)
 	{
 		if (ft_strncmp((char *)&(s1[i]), s2, len_s2) == 0)
 			return ((char *)&(s1[i]));
@@ -43,5 +43,9 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 // 		printf("mine : %s\n ref : %s\n", 
 // 			ft_strnstr(argv[1], argv[2], atoi(argv[3])), 
 // 			strnstr(argv[1], argv[2], atoi(argv[3])));
+// 		printf("mine : %s\n ref : %s\n", 
+// 			ft_strnstr(NULL, argv[2], atoi(argv[3])),
+// 			strnstr(NULL, argv[1], atoi(argv[3])));
+			
 // 	}
 // }
