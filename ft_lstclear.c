@@ -6,7 +6,7 @@
 /*   By: octoross <octoross@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 18:13:24 by octoross          #+#    #+#             */
-/*   Updated: 2023/05/08 18:18:09 by octoross         ###   ########.fr       */
+/*   Updated: 2023/05/30 15:15:30 by octoross         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
+	if (!del || !lst)
+		return ;
 	if (*lst)
 	{
 		if ((*lst)->next)
