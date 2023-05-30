@@ -6,33 +6,31 @@
 /*   By: octoross <octoross@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 22:37:56 by octoross          #+#    #+#             */
-/*   Updated: 2023/05/30 15:28:35 by octoross         ###   ########.fr       */
+/*   Updated: 2023/05/30 15:32:21 by octoross         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *s1, const char *s2, size_t n)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t	i;
-	size_t	len_s2;
+	size_t	little_len;
 
-	if (!s1)
-		return (0);
-	if (!s2 || !s2[0])
-		return ((char *)s1);
-	len_s2 = ft_strlen(s2);
-	if (len_s2 > n)
-		return (0);
-	i = 0;
-	while (s1[i] && i + len_s2 <= n)
+	if (!big && len == 0)
+		return (NULL);
+	if (!*little)
+		return ((char *)big);
+	little_len = ft_strlen(little);
+	while (*big && len >= little_len)
 	{
-		if (ft_strncmp((char *)&(s1[i]), s2, len_s2) == 0)
-			return ((char *)&(s1[i]));
-		i ++;
+		if (ft_strncmp(big, little, little_len) == 0)
+			return ((char *)big);
+		++big;
+		--len;
 	}
-	return (0);
+	return (NULL);
 }
+
 
 // #include <bsd/string.h>
 
