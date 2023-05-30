@@ -6,7 +6,7 @@
 /*   By: octoross <octoross@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 22:37:56 by octoross          #+#    #+#             */
-/*   Updated: 2023/05/30 15:39:49 by octoross         ###   ########.fr       */
+/*   Updated: 2023/05/30 15:40:45 by octoross         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,5 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 // 		printf("mine : %s\n ref : %s\n", 
 // 			ft_strnstr(NULL, argv[2], atoi(argv[3])),
 // 			strnstr(NULL, argv[1], atoi(argv[3])));
-		
 // 	}
 // }
